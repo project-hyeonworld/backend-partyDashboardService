@@ -1,4 +1,4 @@
-package io.partydashboardservice.api.common.exception;
+package io.partydashboardservice.common.exception;
 
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 @Getter
 @RequiredArgsConstructor
 public enum ExceptionResponseCode {
-    PARTY_NOT_FOUND(NOT_FOUND, "The party is not in DB partyId : %d");
+    PARTY_DASHBOARD_NOT_FOUND(NOT_FOUND, "The party dashboard is not in DB partyId : ");
     private final HttpStatus httpStatus;
     private final String message;
 }

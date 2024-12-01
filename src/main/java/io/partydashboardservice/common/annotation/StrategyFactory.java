@@ -1,4 +1,4 @@
-package io.partydashboardservice.api.common.annotation;
+package io.partydashboardservice.common.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -15,6 +15,5 @@ import org.springframework.stereotype.Component;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Component
-public @interface Strategy {
-  long value();
+public @interface StrategyFactory {
 }

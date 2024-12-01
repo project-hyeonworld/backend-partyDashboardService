@@ -5,7 +5,7 @@ import io.partydashboardservice.api.partyDashboard.domain.dto.in.PartyGameStageP
 import io.partydashboardservice.api.partyDashboard.domain.dto.out.PartyDashboardInfo;
 import io.partydashboardservice.api.partyDashboard.event.PartyDashboardEventPublisher;
 import io.partydashboardservice.api.partyDashboard.event.PartyGameStagePatchEvent;
-import io.partydashboardservice.api.common.annotation.Facade;
+import io.partydashboardservice.common.annotation.Facade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
 

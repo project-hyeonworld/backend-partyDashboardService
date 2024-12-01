@@ -1,4 +1,4 @@
-package io.partydashboardservice.api.common.exception;
+package io.partydashboardservice.common.exception;
 
 /**
  * @author : hyeonwoody@gmail.com

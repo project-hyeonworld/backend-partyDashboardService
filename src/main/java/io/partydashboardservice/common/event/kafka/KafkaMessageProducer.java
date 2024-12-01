@@ -1,6 +1,6 @@
-package io.partydashboardservice.api.common.event.kafka;
+package io.partydashboardservice.common.event.kafka;
 
-import io.partyservice.common.event.CustomEvent;
+import io.partydashboardservice.common.event.CustomEvent;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.Serializer;
@@ -11,6 +11,8 @@ import org.apache.kafka.common.serialization.Serializer;
  */
 public interface KafkaMessageProducer<E extends CustomEvent, K, V> {
 
-    KafkaProducer<Serializer<K>, Serializer<V>> getProducer(E event);
+    void initKafkaProducer();
+
+    KafkaProducer<K, V> getProducer(E event);
     ProducerRecord<K, V> produce(E event);
 }

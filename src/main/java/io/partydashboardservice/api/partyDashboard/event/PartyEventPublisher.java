@@ -4,8 +4,8 @@ import io.partydashboardservice.common.event.EventPublisher;
 
 /**
  * @author : hyeonwoody@gmail.com
- * @since : 24. 11. 18.
+ * @since : 24. 12. 2.
  */
-public interface PartyDashboardEventPublisher extends EventPublisher<PartyDashboardEvent> {
+public interface PartyEventPublisher extends EventPublisher<PartyEvent> {
 
 }

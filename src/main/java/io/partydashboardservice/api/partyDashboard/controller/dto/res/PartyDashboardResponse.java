@@ -1,7 +1,7 @@
 package io.partydashboardservice.api.partyDashboard.controller.dto.res;
 
 import io.partydashboardservice.api.partyDashboard.domain.dto.out.PartyDashboardInfo;
-import io.partydashboardservice.api.common.mapper.ObjectrMapper;
+import io.partydashboardservice.common.mapper.ObjectrMapper;
 
 /**
  * @author : hyeonwoody@gmail.com

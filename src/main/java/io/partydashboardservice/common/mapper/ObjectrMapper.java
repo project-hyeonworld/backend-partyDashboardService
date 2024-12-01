@@ -1,4 +1,4 @@
-package io.partydashboardservice.api.common.mapper;
+package io.partydashboardservice.common.mapper;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;

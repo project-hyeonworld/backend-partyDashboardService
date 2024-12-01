@@ -1,0 +1,11 @@
+server:
+  port: 10004
+
+spring:
+  application:
+    name: party-dashboard-service
+  profiles:
+    active: local
+  config:
+    import: configserver:http://localhost:8888
+

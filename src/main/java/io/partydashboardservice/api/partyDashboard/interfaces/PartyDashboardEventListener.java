@@ -1,7 +1,7 @@
 package io.partydashboardservice.api.partyDashboard.interfaces;
 
 import io.partydashboardservice.api.partyDashboard.event.PartyDashboardEvent;
-import io.partydashboardservice.api.common.event.EventListener;
+import io.partydashboardservice.common.event.EventListener;
 
 /**
  * @author : hyeonwoody@gmail.com

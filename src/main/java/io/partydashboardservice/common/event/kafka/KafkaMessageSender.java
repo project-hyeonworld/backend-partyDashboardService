@@ -1,6 +1,6 @@
-package io.partydashboardservice.api.common.event.kafka;
+package io.partydashboardservice.common.event.kafka;
 
-import io.partyservice.common.event.EventPublisher;
+import io.partydashboardservice.common.event.EventPublisher;
 
 /**
  * @author : hyeonwoody@gmail.com

@@ -1,4 +1,4 @@
-package io.partydashboardservice.api.common.event;
+package io.partydashboardservice.common.event;
 
 /**
  * @author : hyeonwoody@gmail.com

@@ -5,7 +5,7 @@ import static io.partydashboardservice.api.partyDashboard.infrastructure.entity.
 import io.partydashboardservice.api.partyDashboard.domain.dto.in.DashboardPatchCommand;
 import io.partydashboardservice.api.partyDashboard.domain.dto.in.PartyGamePatchCommand;
 import io.partydashboardservice.api.partyDashboard.infrastructure.entity.PartyDashboard;
-import io.partydashboardservice.api.common.mapper.ObjectrMapper;
+import io.partydashboardservice.common.mapper.ObjectrMapper;
 import lombok.Getter;
 
 /**
