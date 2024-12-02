@@ -1,4 +1,4 @@
-package io.partydashboardservice.common.event.kafka;
+package io.partydashboardservice.common.event.kafka.producer;
 
 import io.partydashboardservice.common.event.EventPublisher;
 
@@ -6,5 +6,5 @@ import io.partydashboardservice.common.event.EventPublisher;
  * @author : hyeonwoody@gmail.com
  * @since : 24. 12. 1.
  */
-public interface KafkaMessageSender<E> extends EventPublisher<E> {
+public interface KafkaSender<E> extends EventPublisher<E> {
 }

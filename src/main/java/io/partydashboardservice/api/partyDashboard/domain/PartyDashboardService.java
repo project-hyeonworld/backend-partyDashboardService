@@ -5,8 +5,8 @@ import io.partydashboardservice.api.partyDashboard.domain.dto.in.PartyGamePatchC
 import io.partydashboardservice.api.partyDashboard.domain.dto.in.PartyGameStagePatchCommand;
 import io.partydashboardservice.api.partyDashboard.domain.dto.out.PartyDashboardInfo;
 import io.partydashboardservice.api.partyDashboard.infrastructure.PartyDashboardRepository;
-import io.partydashboardservice.api.common.exception.ServerException;
-import io.partydashboardservice.api.common.exception.dto.ServerResponseCode;
+import io.partydashboardservice.common.exception.ExceptionResponseCode;
+import io.partydashboardservice.common.exception.ServerException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CachePut;
@@ -68,6 +68,6 @@ public class PartyDashboardService {
   @Cacheable(cacheNames = "partyDashboardInfo", key = "#partyId", cacheManager = "caffeineCacheManager")
   public PartyDashboardInfo findByPartyId(long partyId) {
     return PartyDashboardInfo.from(partyDashboardRepository.findById(partyId)
-        .orElseThrow(()->new ServerException(ServerResponseCode.PARTY_DASHBOARD_NOT_FOUND)));
+        .orElseThrow(()->new ServerException(ExceptionResponseCode.PARTY_DASHBOARD_NOT_FOUND, String.valueOf(partyId))));
   }
 }
