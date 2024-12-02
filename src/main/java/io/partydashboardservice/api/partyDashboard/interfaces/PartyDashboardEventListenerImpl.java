@@ -4,7 +4,7 @@ import static org.springframework.transaction.event.TransactionPhase.AFTER_COMMI
 
 import io.partydashboardservice.api.partyDashboard.event.PartyDashboardEvent;
 import io.partydashboardservice.api.partyDashboard.event.PartyGameStagePatchEvent;
-//import com.toyproject.hyeonworld.api.sse.domain.SseService;
+import io.partydashboardservice.api.partyDashboard.event.kafka.producer.PartyGameStagePatchKafkaSender;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
@@ -17,7 +17,7 @@ import org.springframework.transaction.event.TransactionalEventListener;
 @Component
 @RequiredArgsConstructor
 public class PartyDashboardEventListenerImpl implements PartyDashboardEventListener {
-    //private final SseService sseService;
+    private final PartyGameStagePatchKafkaSender kafkaSender;
 
 
     @Override
@@ -31,6 +31,6 @@ public class PartyDashboardEventListenerImpl implements PartyDashboardEventListe
 
     //TODO: kafka consumer in partyDashboard & sseService
     private void handleGameStagePatchEvent(PartyGameStagePatchEvent event) {
-        //sseService.sendCurrentGameStage(event.partyId(), event.gameStage());
+        kafkaSender.execute(event);
     }
 }
